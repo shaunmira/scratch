@@ -1,0 +1,30 @@
+from Tkinter import *
+from time import sleep
+
+tk = Tk()
+tk.geometry('500x500')
+
+canvas = Canvas(tk)
+canvas.pack(expand=YES, fill=BOTH)
+
+#arc = canvas.create_arc(100, 100, 300, 300, start=15, extent=30, style=ARC, width=10)
+arc1 = canvas.create_arc(0, 25, 200, 65, start=15, extent=30, style=ARC, width=5)
+arc2 = canvas.create_arc(125, 25, 325, 65, start=165, extent=-30, style=ARC, width=5)
+
+
+'''_, top, _, bottom = canvas.coords(arc)
+
+def shrink():
+    global top
+    global bottom
+    coords = canvas.coords(arc)
+    print coords
+    canvas.coords(arc, 100, top, 300, bottom)
+    canvas.update_idletasks() 
+    top = top + 1
+    bottom = bottom -1
+    tk.after(100, shrink)
+
+shrink()'''
+
+tk.mainloop()
